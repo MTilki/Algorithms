@@ -14,7 +14,11 @@ def main():
         arr.append(values)
 
     #ask for target value
-    target = int(input("Enter the target value"))
+    target = int(input("Enter the target value: "))
+    print("-----------------------------------")
+    print("array: ",arr)
+    print("Search target: ",target)
+    print("-----------------------------------")
 
     def binary_search(arr,target):
 
@@ -27,12 +31,11 @@ def main():
         while mid != target:
             
             mid = (left + right) // 2
-            
+            print(mid)
             if arr[mid] <  target:
                 left = mid + 1
             elif arr[mid] > target:
                 right = mid - 1
-            
             else:
                 return mid
         return  -1
