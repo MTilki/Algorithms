@@ -5,11 +5,13 @@ def main():
     target=0
 
     #input number of elements
+    print("-----------------------------------")
     n = int(input("Enter neumber of elements for the array: "))
 
     #asking for values until n
     for i in range(0, n):
-        values = int(input("Enter array values"))
+        values = int(input("Enter array value: "))
+        print()
         #append values to the arr
         arr.append(values)
 
@@ -20,26 +22,23 @@ def main():
     print("Search target: ",target)
     print("-----------------------------------")
 
-    def binary_search(arr,target):
+    def linier_search(arr,target):
 
         #define left and right of array
-        left=0
-        right= len(arr) -1
-        mid=0
+        found = False
+        pointer = 0
+        last_element = len(arr) -1
 
         #search the array
-        while mid != target:
-            
-            mid = (left + right) // 2
-            if arr[mid] <  target:
-                left = mid + 1
-            elif arr[mid] > target:
-                right = mid - 1
+        while (found is False) or (pointer < last_element):
+            if arr[pointer] == target:
+                found = True
+                return pointer
             else:
-                return mid
+                pointer = pointer +1
         return  -1
 
-    result  = binary_search(arr, target)
+    result  = linier_search(arr, target)
 
     if result != -1:
         print("Element is present at index", str(result))
