@@ -16,7 +16,7 @@ def main():
     
     #ask for targer value
     print("-----------------------------------")
-    print("unsorted array: ",arr)
+    print("Unsorted array: ",arr)
     print("-----------------------------------")
 
     def bubble_sort(arr):
@@ -31,7 +31,7 @@ def main():
         return arr       
     result = bubble_sort(arr)
     print("-----------------------------------")
-    print("sorted array: ",arr)
+    print("Sorted array: ",arr)
     print("-----------------------------------")
 if __name__ == "__main__":
     main()

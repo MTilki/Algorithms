@@ -6,7 +6,7 @@ def main():
 
     #input number of elements
     print("-----------------------------------")
-    n = int(input("Enter neumber of elements for the array: "))
+    n = int(input("Enter number of elements for the array: "))
 
     #asking for values until n
     for i in range(0, n):
